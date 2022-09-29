@@ -1,3 +1,4 @@
+# budget class with the actions as methods
 class Budget:
     def __init__(self, name, amount):
         self.name = name
@@ -10,11 +11,18 @@ class Budget:
     def Transfer(self):
         self.amount += withdrawalamount
         print(f"you have #{category_one.amount} for food, #{category_two.amount} for clothing, #{category_three.amount} for home bills and #{category_four.amount} for other expenses")
+
+#budget categories        
 category_one = Budget('Food', 25000)
 category_two = Budget('Clothing', 20000)
 category_three = Budget('Home bills',  35000)
 category_four = Budget('Miscellaneous', 75000)
+
+#options representing each budget category
 valid_options = [1,2,3,4]
+
+#action initiated on running program
+#defines everything that can be done within the program
 action = int(input('Welcome ore, what would you like to do? \n 1) Withdraw 2) Deposit \n 3) Transfer 4) Check budget balances \n'))
 while ( action not in valid_options):
     print('invalid option, please try again')
